@@ -1,0 +1,16 @@
+[user]
+  name = Andrei Shchatko
+  email = andrei.shchatko@gmail.com
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  cp = cherry-pick
+[core]
+  editor = vim
+[color]
+  diff = true
+  status = true
+  branch = true
+  interactive = true

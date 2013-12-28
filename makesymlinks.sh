@@ -6,9 +6,9 @@
 
 ########## Variables
 
-dir=~/andydotfiles2                         # dotfiles directory
-olddir=~/andydotfiles_ex                    # old dotfiles backup directory
-files="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink in homedir
+dir=~/andydotfiles2                                   # dotfiles directory
+olddir=~/andydotfiles_ex                              # old dotfiles backup directory
+files="bashrc vimrc vim zshrc oh-my-zsh gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
