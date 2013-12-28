@@ -5,7 +5,7 @@ files="bashrc vimrc vim zshrc oh-my-zsh"    # list of files/folders to symlink i
 
 echo "Uninstalling andydotfiles2"
 
-for file in $files do
+for file in $files; do
   echo -n "Deleting symlinks to $file in home directory"
   rm -rf ~/.$file
   echo -n "Moving dotfiles from $olddir to ~"
