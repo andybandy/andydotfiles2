@@ -56,7 +56,9 @@ call vundle#rc()
   Bundle 'git://github.com/gre/play2vim.git'
 
 " Clojure
-  Bundle 'git://github.com/vim-scripts/VimClojure.git'
+  Bundle 'tpope/vim-fireplace'
+  Bundle 'tpope/vim-classpath'
+  Bundle 'guns/vim-clojure-static'
 
 " powerline
   Bundle 'git://github.com/Lokaltog/vim-powerline.git'
