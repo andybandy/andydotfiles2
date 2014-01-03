@@ -60,8 +60,8 @@ call vundle#rc()
   Bundle 'tpope/vim-classpath'
   Bundle 'guns/vim-clojure-static'
 
-" powerline
-  Bundle 'git://github.com/Lokaltog/vim-powerline.git'
+" Vim airline
+  Bundle 'bling/vim-airline'
 
 " ctrlp
   Bundle 'git://github.com/kien/ctrlp.vim.git'
@@ -82,26 +82,12 @@ filetype plugin indent on     " required!
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
+set guifont=Menlo:h14
 syntax on
 
 set t_Co=256
 set background=dark
 colorscheme Tomorrow-Night-Bright
-
-highlight clear SignColumn
-highlight VertSplit    ctermbg=236
-highlight ColorColumn  ctermbg=237
-highlight LineNr       ctermbg=236 ctermfg=240
-highlight CursorLineNr ctermbg=236 ctermfg=240
-highlight CursorLine   ctermbg=236
-highlight StatusLineNC ctermbg=238 ctermfg=0
-highlight StatusLine   ctermbg=240 ctermfg=12
-highlight IncSearch    ctermbg=0   ctermfg=3
-highlight Search       ctermbg=0   ctermfg=9
-highlight Visual       ctermbg=3   ctermfg=0
-highlight Pmenu        ctermbg=240 ctermfg=12
-highlight PmenuSel     ctermbg=0   ctermfg=3
-highlight SpellBad     ctermbg=0   ctermfg=1
 
 set number
 
@@ -133,8 +119,24 @@ set hlsearch
 set incsearch
 set ignorecase
 
-" Powerline
-  let g:Powerline_symbols = 'fancy'
+" Airline
+  if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
+  endif
+
+  " unicode symbols
+  let g:airline_left_sep = '»'
+  let g:airline_left_sep = '▶'
+  let g:airline_right_sep = '«'
+  let g:airline_right_sep = '◀'
+  let g:airline_symbols.linenr = '␊'
+  let g:airline_symbols.linenr = '␤'
+  let g:airline_symbols.linenr = '¶'
+  let g:airline_symbols.branch = '⎇'
+  let g:airline_symbols.paste = 'ρ'
+  let g:airline_symbols.paste = 'Þ'
+  let g:airline_symbols.paste = '∥'
+  let g:airline_symbols.whitespace = 'Ξ'
 
 " NERDTree
    nmap <Bs> :NERDTreeToggle<CR>
