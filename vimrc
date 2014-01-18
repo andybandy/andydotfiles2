@@ -60,6 +60,9 @@ call vundle#rc()
   Bundle 'tpope/vim-classpath'
   Bundle 'guns/vim-clojure-static'
 
+" Processing
+  Bundle 'sophacles/vim-processing'
+
 " Vim airline
   Bundle 'bling/vim-airline'
 
