@@ -63,6 +63,9 @@ call vundle#rc()
 " Processing
   Bundle 'sophacles/vim-processing'
 
+" OpenGL shaders
+  Bundle 'tikhomirov/vim-glsl'
+
 " Vim airline
   Bundle 'bling/vim-airline'
 
