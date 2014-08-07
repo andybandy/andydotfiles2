@@ -51,7 +51,6 @@ call vundle#rc()
   Bundle 'git://github.com/slim-template/vim-slim.git'
 
 " Scala/Play
-  Bundle 'git://github.com/derekwyatt/vim-scala.git'
   Bundle 'derekwyatt/vim-scala'
   Bundle 'git://github.com/gre/play2vim.git'
 
