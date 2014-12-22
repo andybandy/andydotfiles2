@@ -62,6 +62,9 @@ call vundle#rc()
 " Processing
   Bundle 'sophacles/vim-processing'
 
+" csound
+  Bundle 'kunstmusik/csound-vim'
+
 " OpenGL shaders
   Bundle 'tikhomirov/vim-glsl'
 
@@ -79,6 +82,7 @@ call vundle#rc()
 
 " colors
   Bundle 'chriskempson/base16-vim'
+  Bundle 'morhetz/gruvbox'
 
 " nerdtree
   Bundle 'scrooloose/nerdtree'
