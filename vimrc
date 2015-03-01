@@ -59,11 +59,17 @@ call vundle#rc()
   Bundle 'tpope/vim-classpath'
   Bundle 'guns/vim-clojure-static'
 
+" Rust
+  Bundle 'wting/rust'
+
 " Processing
   Bundle 'sophacles/vim-processing'
 
 " csound
   Bundle 'kunstmusik/csound-vim'
+
+" SuperCollider
+  Bundle 'sbl/scvim'
 
 " OpenGL shaders
   Bundle 'tikhomirov/vim-glsl'
