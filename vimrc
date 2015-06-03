@@ -24,6 +24,9 @@ call vundle#rc()
 " Vundle
   Bundle 'gmarik/vundle'
 
+" Editor config
+  Bundle 'editorconfig/editorconfig-vim'
+
 " CSS/LESS
   Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
   Bundle 'git://github.com/ap/vim-css-color.git'
@@ -89,6 +92,7 @@ call vundle#rc()
 " colors
   Bundle 'chriskempson/base16-vim'
   Bundle 'morhetz/gruvbox'
+  Bundle 'cdmedia/itg_flat_vim'
 
 " nerdtree
   Bundle 'scrooloose/nerdtree'
