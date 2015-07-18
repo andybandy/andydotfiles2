@@ -10,6 +10,9 @@ ZSH_THEME="bira"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias pd="/Applications/Pd-extended.app/Contents/Resources/bin/pd"
+alias pdsend="/Applications/Pd-extended.app/Contents/Resources/bin/pdsend"
+alias pdrecieve="/Applications/Pd-extended.app/Contents/Resources/bin/pdrecieve"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
