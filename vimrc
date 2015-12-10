@@ -93,6 +93,8 @@ call vundle#rc()
   Bundle 'chriskempson/base16-vim'
   Bundle 'morhetz/gruvbox'
   Bundle 'cdmedia/itg_flat_vim'
+  Bundle 'lyxell/pride.vim'
+  Bundle 'zsoltf/vim-maui'
 
 " nerdtree
   Bundle 'scrooloose/nerdtree'
