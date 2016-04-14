@@ -89,11 +89,13 @@ call vundle#rc()
 " git
   Bundle 'git://github.com/tpope/vim-fugitive.git'
 
+" greplace
+  Bundle 'vim-scripts/greplace.vim'
+
 " colors
   Bundle 'chriskempson/base16-vim'
   Bundle 'morhetz/gruvbox'
   Bundle 'cdmedia/itg_flat_vim'
-  Bundle 'lyxell/pride.vim'
   Bundle 'zsoltf/vim-maui'
 
 " nerdtree
