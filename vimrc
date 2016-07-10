@@ -101,6 +101,10 @@ call vundle#rc()
 " nerdtree
   Bundle 'scrooloose/nerdtree'
 
+" markdown
+  Bundle 'tpope/vim-markdown'
+  Bundle 'suan/vim-instant-markdown'
+
 filetype plugin indent on     " required!
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -189,3 +193,7 @@ function! Tab_Or_Complete()
 endfunction
 :inoremap <Tab> <C-R>=Tab_Or_Complete()<CR>
 :set dictionary="/usr/dict/words"
+
+" markdown
+let g:instant_markdown_slow = 0
+let g:instant_markdown_autostart = 0
