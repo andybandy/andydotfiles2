@@ -201,3 +201,6 @@ let g:instant_markdown_autostart = 0
 
 " vim-jsx (react)
 let g:jsx_ext_required = 0
+
+" ctrlp
+let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))'
