@@ -41,6 +41,7 @@ call vundle#rc()
   Bundle 'git://github.com/kchmck/vim-coffee-script.git'
   Bundle 'git://github.com/walm/jshint.vim.git'
   Bundle 'git://github.com/briancollins/vim-jst.git'
+  Bundle 'mxw/vim-jsx'
 
 " Html
   Bundle 'git://github.com/digitaltoad/vim-jade.git'
@@ -197,3 +198,6 @@ endfunction
 " markdown
 let g:instant_markdown_slow = 0
 let g:instant_markdown_autostart = 0
+
+" vim-jsx (react)
+let g:jsx_ext_required = 0
