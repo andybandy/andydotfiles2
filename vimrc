@@ -7,6 +7,8 @@
 set encoding=utf-8
 set fileencodings=utf-8,cp-1251
 
+set ttm=100
+
 " Bundles
 " Setting up Vundle if not installed
 let iCanHazVundle=1
@@ -37,16 +39,12 @@ call vundle#rc()
 
 " JavaScript
   Bundle 'git://github.com/pangloss/vim-javascript.git'
-  Bundle 'git://github.com/itspriddle/vim-jquery.git'
   Bundle 'git://github.com/kchmck/vim-coffee-script.git'
-  Bundle 'git://github.com/walm/jshint.vim.git'
   Bundle 'git://github.com/briancollins/vim-jst.git'
   Bundle 'mxw/vim-jsx'
 
 " Html
   Bundle 'git://github.com/digitaltoad/vim-jade.git'
-  Bundle 'git://github.com/nono/vim-handlebars'
-  Bundle 'git://github.com/heartsentwined/vim-emblem'
 
 " Ruby/Rails
   Bundle 'git://github.com/vim-ruby/vim-ruby.git'
@@ -56,7 +54,6 @@ call vundle#rc()
 
 " Scala/Play
   Bundle 'derekwyatt/vim-scala'
-  Bundle 'git://github.com/gre/play2vim.git'
 
 " Clojure
   Bundle 'tpope/vim-fireplace'
@@ -80,6 +77,7 @@ call vundle#rc()
 
 " Vim airline
   Bundle 'bling/vim-airline'
+  Bundle 'vim-airline/vim-airline-themes'
 
 " ctrlp
   Bundle 'git://github.com/kien/ctrlp.vim.git'
@@ -98,9 +96,11 @@ call vundle#rc()
   Bundle 'morhetz/gruvbox'
   Bundle 'cdmedia/itg_flat_vim'
   Bundle 'zsoltf/vim-maui'
+  Bundle 'flazz/vim-colorschemes'
 
 " nerdtree
   Bundle 'scrooloose/nerdtree'
+  Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " markdown
   Bundle 'tpope/vim-markdown'
@@ -115,7 +115,8 @@ syntax on
 
 set t_Co=256
 set background=dark
-colorscheme Tomorrow-Night-Bright
+colorscheme hybrid
+" colorscheme Tomorrow-Night-Bright
 
 set number
 
