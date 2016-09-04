@@ -24,87 +24,81 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " Vundle
-  Bundle 'gmarik/vundle'
+Bundle 'gmarik/vundle'
 
 " Editor config
-  Bundle 'editorconfig/editorconfig-vim'
+Bundle 'editorconfig/editorconfig-vim'
 
 " CSS/LESS
-  Bundle 'git://github.com/hail2u/vim-css3-syntax.git'
-  Bundle 'git://github.com/ap/vim-css-color.git'
-  Bundle 'git://github.com/groenewege/vim-less.git'
-  Bundle 'git://github.com/miripiruni/vim-better-css-indent.git'
-  Bundle 'git://github.com/miripiruni/CSScomb-for-Vim.git'
-  Bundle 'git://github.com/wavded/vim-stylus'
+Bundle 'hail2u/vim-css3-syntax'
+Bundle 'ap/vim-css-color'
+Bundle 'miripiruni/vim-better-css-indent'
+Bundle 'csscomb/CSScomb-for-Vim'
+Bundle 'wavded/vim-stylus'
 
 " JavaScript
-  Bundle 'git://github.com/pangloss/vim-javascript.git'
-  Bundle 'git://github.com/kchmck/vim-coffee-script.git'
-  Bundle 'git://github.com/briancollins/vim-jst.git'
-  Bundle 'mxw/vim-jsx'
+Bundle 'pangloss/vim-javascript'
+Bundle 'kchmck/vim-coffee-script'
+Bundle 'briancollins/vim-jst'
+Bundle 'mxw/vim-jsx'
+Bundle 'othree/javascript-libraries-syntax.vim'
+Bundle 'othree/yajs.vim'
 
-" Html
-  Bundle 'git://github.com/digitaltoad/vim-jade.git'
+" json
+Bundle 'elzr/vim-json'
 
 " Ruby/Rails
-  Bundle 'git://github.com/vim-ruby/vim-ruby.git'
-  Bundle 'git://github.com/tpope/vim-rails.git'
-  Bundle 'git://github.com/tpope/vim-endwise.git'
-  Bundle 'git://github.com/slim-template/vim-slim.git'
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-endwise'
+Bundle 'slim-template/vim-slim'
 
-" Scala/Play
-  Bundle 'derekwyatt/vim-scala'
+" Scala
+Bundle 'derekwyatt/vim-scala'
 
 " Clojure
-  Bundle 'tpope/vim-fireplace'
-  Bundle 'tpope/vim-classpath'
-  Bundle 'guns/vim-clojure-static'
-
-" Rust
-  Bundle 'wting/rust'
+Bundle 'tpope/vim-fireplace'
+Bundle 'tpope/vim-classpath'
+Bundle 'guns/vim-clojure-static'
 
 " Processing
-  Bundle 'sophacles/vim-processing'
+Bundle 'sophacles/vim-processing'
 
 " csound
-  Bundle 'kunstmusik/csound-vim'
+Bundle 'luisjure/csound'
 
 " SuperCollider
-  Bundle 'sbl/scvim'
+Bundle 'sbl/scvim'
 
 " OpenGL shaders
-  Bundle 'tikhomirov/vim-glsl'
+Bundle 'tikhomirov/vim-glsl'
 
 " Vim airline
-  Bundle 'bling/vim-airline'
-  Bundle 'vim-airline/vim-airline-themes'
+Bundle 'bling/vim-airline'
+Bundle 'vim-airline/vim-airline-themes'
 
 " ctrlp
-  Bundle 'git://github.com/kien/ctrlp.vim.git'
-
-" mustache
-  Bundle 'git://github.com/juvenn/mustache.vim.git'
+Bundle 'kien/ctrlp.vim'
 
 " git
-  Bundle 'git://github.com/tpope/vim-fugitive.git'
+Bundle 'tpope/vim-fugitive'
 
 " greplace
-  Bundle 'vim-scripts/greplace.vim'
+Bundle 'vim-scripts/greplace.vim'
 
 " colors
-  Bundle 'chriskempson/base16-vim'
-  Bundle 'morhetz/gruvbox'
-  Bundle 'cdmedia/itg_flat_vim'
-  Bundle 'zsoltf/vim-maui'
-  Bundle 'flazz/vim-colorschemes'
+Bundle 'chriskempson/base16-vim'
+Bundle 'morhetz/gruvbox'
+Bundle 'cdmedia/itg_flat_vim'
+Bundle 'zsoltf/vim-maui'
+Bundle 'flazz/vim-colorschemes'
 
 " nerdtree
-  Bundle 'scrooloose/nerdtree'
-  Bundle 'Xuyuanp/nerdtree-git-plugin'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Xuyuanp/nerdtree-git-plugin'
 
 " markdown
-  Bundle 'tpope/vim-markdown'
-  Bundle 'suan/vim-instant-markdown'
+Bundle 'tpope/vim-markdown'
+Bundle 'suan/vim-instant-markdown'
 
 filetype plugin indent on     " required!
 filetype plugin on
@@ -205,3 +199,6 @@ let g:jsx_ext_required = 0
 
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))'
+
+" javascript
+let g:used_javascript_libs= 'underscore,react'
