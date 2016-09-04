@@ -44,6 +44,7 @@ alias pdrecieve="/Applications/Pd-extended.app/Contents/Resources/bin/pdrecieve"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git osx ruby)
+plugins+=(zsh-nvm)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -69,7 +70,7 @@ eval "$(rbenv init -)"
 # Postgresapp
 # PATH="/Applications/Postgres.app/Contents/MacOS/bin:$PATH"
 export PGHOST=localhost
-export PATH=$PATH:/Applications/Postgres.app/Contents/MacOS/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 # node modules
 export PATH=$PATH:~/.homebrew/share/npm/bin
@@ -81,3 +82,15 @@ export PATH="/usr/local/heroku/bin:$PATH"
 
 # Processing
 export PATH=$PATH:~/.processing
+
+# Supercollider
+export PATH=$PATH:/Applications/SuperCollider/SuperCollider.app/Contents/Resources
+
+# Vagrant settings quineex
+export VAGRANT_MEM=1600
+export VAGRANT_CPUS=1
+export VAGRANT_CPU_LIMIT=70
+
+# Go lang
+export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/Dev
