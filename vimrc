@@ -8,6 +8,7 @@ set encoding=utf-8
 set fileencodings=utf-8,cp-1251
 
 set ttm=100
+set ttyfast
 
 " Bundles
 " Setting up Vundle if not installed
