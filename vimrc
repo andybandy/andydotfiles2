@@ -143,6 +143,14 @@ set hlsearch
 set incsearch
 set ignorecase
 
+" mouse scroll
+set mouse=a
+if has("mouse_sgr")
+  set ttymouse=sgr
+else
+  set ttymouse=xterm2
+endif
+
 " Airline
   if !exists('g:airline_symbols')
     let g:airline_symbols = {}
