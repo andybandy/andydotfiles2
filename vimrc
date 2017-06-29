@@ -36,6 +36,7 @@ Bundle 'ap/vim-css-color'
 Bundle 'miripiruni/vim-better-css-indent'
 Bundle 'csscomb/CSScomb-for-Vim'
 Bundle 'wavded/vim-stylus'
+Bundle 'fleischie/vim-styled-components'
 
 " JavaScript
 Bundle 'pangloss/vim-javascript'
