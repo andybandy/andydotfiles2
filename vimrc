@@ -27,16 +27,24 @@ call vundle#rc()
 " Vundle
 Bundle 'gmarik/vundle'
 
+" vim orgmode
+Bundle 'jceb/vim-orgmode'
+
+" vim indent
+Bundle 'nathanaelkane/vim-indent-guides'
+
 " Editor config
 Bundle 'editorconfig/editorconfig-vim'
+
+" Syntax check
+" Bundle 'vim-syntastic/syntastic'
 
 " CSS/LESS
 Bundle 'hail2u/vim-css3-syntax'
 Bundle 'ap/vim-css-color'
 Bundle 'miripiruni/vim-better-css-indent'
-Bundle 'csscomb/CSScomb-for-Vim'
-Bundle 'wavded/vim-stylus'
-Bundle 'fleischie/vim-styled-components'
+Bundle 'csscomb/vim-csscomb'
+Bundle 'styled-components/vim-styled-components'
 
 " JavaScript
 Bundle 'pangloss/vim-javascript'
@@ -45,12 +53,14 @@ Bundle 'briancollins/vim-jst'
 Bundle 'mxw/vim-jsx'
 Bundle 'othree/javascript-libraries-syntax.vim'
 Bundle 'othree/yajs.vim'
+Bundle 'othree/es.next.syntax.vim'
 
 " json
 Bundle 'elzr/vim-json'
 
 " Ruby/Rails
 Bundle 'vim-ruby/vim-ruby'
+Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-endwise'
 Bundle 'slim-template/vim-slim'
 
@@ -70,6 +80,7 @@ Bundle 'luisjure/csound'
 
 " SuperCollider
 Bundle 'sbl/scvim'
+Bundle 'munshkr/vim-tidal'
 
 " OpenGL shaders
 Bundle 'tikhomirov/vim-glsl'
@@ -83,9 +94,10 @@ Bundle 'kien/ctrlp.vim'
 
 " git
 Bundle 'tpope/vim-fugitive'
+Bundle 'airblade/vim-gitgutter'
 
 " greplace
-Bundle 'vim-scripts/greplace.vim'
+Bundle 'skwp/greplace.vim'
 
 " colors
 Bundle 'chriskempson/base16-vim'
@@ -93,6 +105,10 @@ Bundle 'morhetz/gruvbox'
 Bundle 'cdmedia/itg_flat_vim'
 Bundle 'zsoltf/vim-maui'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'dracula/vim'
+Bundle 'nightsense/office'
+Bundle 'arcticicestudio/nord-vim'
+Bundle 'NLKNguyen/papercolor-theme'
 
 " nerdtree
 Bundle 'scrooloose/nerdtree'
@@ -102,17 +118,29 @@ Bundle 'Xuyuanp/nerdtree-git-plugin'
 Bundle 'tpope/vim-markdown'
 Bundle 'suan/vim-instant-markdown'
 
+Bundle 'tpope/vim-surround'
+
+" Bundle 'mitermayer/vim-prettier'
+Bundle 'w0rp/ale'
+
 filetype plugin indent on     " required!
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
-set guifont=Menlo:h14
+set guifont=Hack:h12
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
 syntax on
 
 set t_Co=256
 set background=dark
-colorscheme hybrid
+colorscheme PaperColor
+" colorscheme nord
 " colorscheme Tomorrow-Night-Bright
+
+" javascript
+let g:used_javascript_libs='underscore,react'
 
 set number
 
@@ -138,6 +166,15 @@ set listchars=tab:▸\ ,trail:·,extends:❯,precedes:❮,nbsp:·
 
 set laststatus=2
 
+set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
+" let g:syntastic_check_on_open = 1
+" let g:syntastic_check_on_wq = 0
+
 " Cool search
 set showmatch
 set hlsearch
@@ -148,9 +185,12 @@ set ignorecase
 set mouse=a
 if has("mouse_sgr")
   set ttymouse=sgr
-else
+elseif !has('nvim')
   set ttymouse=xterm2
 endif
+
+" Clipboard copy
+set clipboard=unnamed
 
 " Airline
   if !exists('g:airline_symbols')
@@ -210,5 +250,25 @@ let g:jsx_ext_required = 0
 " ctrlp
 let g:ctrlp_custom_ignore = '\v[\/](node_modules)|(\.(swp|git))'
 
-" javascript
-let g:used_javascript_libs= 'underscore,react'
+" prettier
+" let g:prettier#quickfix_enabled = 0
+" 
+" let g:prettier#config#print_width = 120
+" " let g:prettier#config#tab_width = 'auto'
+" let g:prettier#config#use_tabs = 'false'
+" let g:prettier#config#semi = 'false'
+" let g:prettier#config#single_quote = 'true'
+" let g:prettier#config#bracket_spacing = 'true'
+" let g:prettier#config#trailing_comma = 'none'
+" let g:prettier#config#parser = 'babylon'
+" 
+" let g:prettier#autoformat = 0
+" autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.graphql PrettierAsync
+
+" ale
+let g:ale_fixers = {}
+let g:ale_fixers['javascript'] = ['prettier']
+let g:ale_fixers['css'] = ['prettier']
+let g:ale_fixers['scss'] = ['prettier']
+let g:ale_fix_on_save = 1
+let g:ale_javascript_prettier_options = '--print-width 120 --no-semi --single-quote --parser babylon'
